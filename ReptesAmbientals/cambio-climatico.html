@@ -9,7 +9,9 @@
 </head>
 <body>
 
-  <nav class="navbar"><a href="index.html">← Volver a inicio</a></nav>
+  <nav class="navbar">
+    <a href="index.html">← Volver a inicio</a>
+  </nav>
 
   <header class="section-hero" style="background-image:url('img/clima.jpg');">
     <div class="overlay">
@@ -19,19 +21,21 @@
   </header>
 
   <main class="container">
-    <canvas id="graficoCO2"></canvas>
+    <section class="chart-box">
+      <canvas id="graficoCO2"></canvas>
+    </section>
 
-    <div class="info">
+    <section class="info">
       <p><strong>Impacto ambiental:</strong> Aumento de temperaturas, incendios, sequías y pérdida de biodiversidad.</p>
       <p><strong>Impacto humano:</strong> Problemas de salud, pérdidas agrícolas e infraestructuras dañadas.</p>
       <p><strong>Medidas:</strong> Energías renovables, transporte sostenible y acuerdos internacionales.</p>
-    </div>
+    </section>
 
-    <div class="image-gallery">
+    <section class="image-gallery">
       <img src="img/clima1.jpg" alt="Hielo derritiéndose">
       <img src="img/clima2.jpg" alt="Sequía severa">
       <img src="img/clima3.jpg" alt="Incendio forestal">
-    </div>
+    </section>
   </main>
 
   <footer><p>© 2025 Infoweb</p></footer>
@@ -46,10 +50,15 @@
           data: [25,28,32,36,40],
           borderColor: '#1b4332',
           backgroundColor: '#d8f3dc',
-          fill: true
+          fill: true,
+          tension: 0.3
         }]
+      },
+      options: {
+        responsive: true
       }
     });
   </script>
+
 </body>
 </html>

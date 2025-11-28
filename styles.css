@@ -1,3 +1,4 @@
+/* ----------------------- base original ----------------------- */
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -30,7 +31,7 @@ h1, h2, h3 {
 .hero {
   position: relative;
   background: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80') center/cover;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,8 +53,10 @@ h1, h2, h3 {
   text-align: center;
   padding: 2rem;
   border-radius: 10px;
+  max-width: 900px;
 }
 
+/* --- CONTENEDOR --- */
 .container {
   max-width: 1000px;
   margin: 2rem auto;
@@ -64,7 +67,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* --- CARDS INDEX --- */
+/* --- CARDS INDEX (original adaptado) --- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -138,6 +141,7 @@ footer {
   margin-top: 3rem;
 }
 
+/* --- GALLERY --- */
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -154,4 +158,148 @@ footer {
 
 .image-gallery img:hover {
   transform: scale(1.05);
+}
+
+/* ----------------------- NUEVAS REGLAS PARA BOTONES / LAYOUTS ----------------------- */
+
+/* Botones principales del index (dos grandes) */
+.menu-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.main-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 120px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* overlay oscuro dentro del botón para legibilidad */
+.main-btn span {
+  position: relative;
+  z-index: 2;
+  padding: .5rem 1rem;
+  background: rgba(0,0,0,0.45);
+  border-radius: 6px;
+}
+
+/* efecto hover */
+.main-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 32px rgba(0,0,0,0.28);
+}
+
+/* GRID 2x2 para retos medioambientales */
+.card-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+/* Botones/cajas reutilizables para retos (imagen de fondo, texto centrado) */
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* sombreado y contraste para el texto dentro de cada botón */
+.card-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  transition: background .25s ease;
+  z-index: 1;
+}
+
+.card-btn span {
+  position: relative;
+  z-index: 2;
+  padding: .35rem .6rem;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.0);
+}
+
+/* hover */
+.card-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.28);
+}
+.card-btn:hover::after {
+  background: rgba(0,0,0,0.5);
+}
+
+/* fila de 3 botones para retos sociales */
+.card-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+}
+
+/* que los 3 botones sean responsivos: en pantallas pequeñas pasan a columna */
+@media (max-width: 900px) {
+  .card-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-buttons {
+    flex-direction: column;
+  }
+
+  .main-btn {
+    width: 90%;
+    height: 110px;
+  }
+}
+
+/* pequeños ajustes visuales */
+.container h2 {
+  color: #164e37;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Accessibility: focus visible */
+a:focus {
+  outline: 3px solid rgba(66, 153, 225, 0.6);
+  outline-offset: 2px;
 }

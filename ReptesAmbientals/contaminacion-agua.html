@@ -9,7 +9,9 @@
 </head>
 <body>
 
-  <nav class="navbar"><a href="index.html">← Volver a inicio</a></nav>
+  <nav class="navbar">
+    <a href="index.html">← Volver a inicio</a>
+  </nav>
 
   <header class="section-hero" style="background-image:url('img/agua.jpg');">
     <div class="overlay">
@@ -19,19 +21,21 @@
   </header>
 
   <main class="container">
-    <canvas id="graficoPlasticos"></canvas>
+    <section class="chart-box">
+      <canvas id="graficoPlasticos"></canvas>
+    </section>
 
-    <div class="info">
+    <section class="info">
       <p><strong>Impacto ambiental:</strong> Daño a fauna marina y ecosistemas acuáticos.</p>
       <p><strong>Impacto humano:</strong> Afecta la pesca, el turismo y la salud.</p>
       <p><strong>Medidas:</strong> Reducir plásticos de un solo uso, fomentar el reciclaje y limpiezas marinas.</p>
-    </div>
+    </section>
 
-    <div class="image-gallery">
+    <section class="image-gallery">
       <img src="img/agua1.jpg" alt="Océano limpio">
       <img src="img/agua2.jpg" alt="Plásticos en el mar">
       <img src="img/agua3.jpg" alt="Limpieza marina">
-    </div>
+    </section>
   </main>
 
   <footer><p>© 2025 Infoweb</p></footer>
@@ -46,8 +50,12 @@
           data: [200,250,300,400],
           backgroundColor: '#74c69d'
         }]
+      },
+      options: {
+        responsive: true
       }
     });
   </script>
+
 </body>
 </html>

@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infoweb · Retos Medioambientales</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infoweb: Retos Medioambientales y Sociales</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header class="hero">
     <div class="overlay">
-      <h1>Infoweb: Retos Medioambientales</h1>
+      <h1>Infoweb: Retos Medioambientales y Sociales</h1>
       <p>Explora los grandes desafíos que marcarán nuestro futuro</p>
     </div>
   </header>
 
-  <main class="container">
-    <h2 class="center">Selecciona un reto para saber más</h2>
+  <main class="container center">
+    <h2>Selecciona una categoría</h2>
 
-    <div class="card-grid">
-      <a href="cambio-climatico.html" class="card" style="background-image: url('img/clima.jpg');">
-        <div class="card-overlay"><h3>Cambio Climático</h3></div>
+    <div class="menu-buttons">
+      <!-- los botones muestran la misma imagen de fondo (ruta a ReptesAmbientals/img/agua1.jpg) -->
+      <a href="ReptesAmbientals/retos-medioambientales.html" class="main-btn" style="background-image: url('ReptesAmbientals/img/clima.jpg')">
+        <span>Retos Medioambientales</span>
       </a>
 
-      <a href="contaminacion-agua.html" class="card" style="background-image: url('img/agua.jpg');">
-        <div class="card-overlay"><h3>Contaminación del Agua</h3></div>
-      </a>
-
-      <a href="deforestacion.html" class="card" style="background-image: url('img/bosque.jpg');">
-        <div class="card-overlay"><h3>Deforestación</h3></div>
-      </a>
-
-      <a href="contaminacion-aire.html" class="card" style="background-image: url('img/aire.jpg');">
-        <div class="card-overlay"><h3>Contaminación del Aire</h3></div>
+      <a href="ReptesSocials/retos-sociales.html" class="main-btn" style="background-image: url('ReptesAmbientals/img/agua1.jpg')">
+        <span>Retos Sociales</span>
       </a>
     </div>
   </main>
@@ -40,5 +33,6 @@
   <footer>
     <p>© 2025 Infoweb · Proyecto del Equipo MVP</p>
   </footer>
+
 </body>
 </html>

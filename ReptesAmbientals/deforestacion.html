@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deforestación · Infoweb</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
 
-  <nav class="navbar"><a href="index.html">← Volver a inicio</a></nav>
+  <nav class="navbar">
+    <a href="index.html">← Volver a inicio</a>
+  </nav>
 
   <header class="section-hero" style="background-image:url('img/bosque.jpg');">
     <div class="overlay">
@@ -20,33 +22,38 @@
   </header>
 
   <main class="container">
-    <div id="map"></div>
+    <section class="map-box">
+      <div id="map"></div>
+    </section>
 
-    <div class="info">
+    <section class="info">
       <p><strong>Impacto ambiental:</strong> Reducción de biodiversidad y aumento del CO₂.</p>
       <p><strong>Impacto humano:</strong> Afecta comunidades indígenas y recursos naturales.</p>
       <p><strong>Medidas:</strong> Reforestación, reservas naturales y control de tala ilegal.</p>
-    </div>
+    </section>
 
-    <div class="image-gallery">
+    <section class="image-gallery">
       <img src="img/bosque1.jpg" alt="Selva tropical intacta">
       <img src="img/bosque2.jpg" alt="Deforestación visible">
       <img src="img/bosque3.jpg" alt="Reforestación en curso">
-    </div>
+    </section>
   </main>
 
   <footer><p>© 2025 Infoweb</p></footer>
 
   <script>
-    var map = L.map('map').setView([-3.4653, -62.2159], 4);
+    const map = L.map('map').setView([-3.4653, -62.2159], 4);
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap'
     }).addTo(map);
+
     L.circle([-3.4653, -62.2159], {
       color: '#2d6a4f',
       radius: 500000,
       fillOpacity: 0.4
     }).addTo(map).bindPopup('Zona afectada por la deforestación en el Amazonas');
   </script>
+
 </body>
 </html>

@@ -9,7 +9,9 @@
 </head>
 <body>
 
-  <nav class="navbar"><a href="index.html">← Volver a inicio</a></nav>
+  <nav class="navbar">
+    <a href="index.html">← Volver a inicio</a>
+  </nav>
 
   <header class="section-hero" style="background-image:url('img/aire.jpg');">
     <div class="overlay">
@@ -19,19 +21,21 @@
   </header>
 
   <main class="container">
-    <canvas id="graficoAire"></canvas>
+    <section class="chart-box">
+      <canvas id="graficoAire"></canvas>
+    </section>
 
-    <div class="info">
+    <section class="info">
       <p><strong>Impacto ambiental:</strong> Daña ecosistemas y contribuye al cambio climático.</p>
       <p><strong>Impacto humano:</strong> Provoca enfermedades respiratorias y cardiovasculares.</p>
       <p><strong>Medidas:</strong> Transporte eléctrico, energías limpias y control industrial.</p>
-    </div>
+    </section>
 
-    <div class="image-gallery">
+    <section class="image-gallery">
       <img src="img/aire1.jpg" alt="Ciudad con smog">
       <img src="img/aire2.jpg" alt="Fábrica emitiendo humo">
       <img src="img/aire3.jpg" alt="Transporte urbano eléctrico limpio">
-    </div>
+    </section>
   </main>
 
   <footer><p>© 2025 Infoweb</p></footer>
@@ -45,8 +49,12 @@
           data: [40,30,20,10],
           backgroundColor: ['#95d5b2','#74c69d','#40916c','#1b4332']
         }]
+      },
+      options: {
+        responsive: true
       }
     });
   </script>
+
 </body>
 </html>
