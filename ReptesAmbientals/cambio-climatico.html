@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cambio Climático · Infoweb</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio Climático · Infoweb</title>
+<link rel="stylesheet" href="../styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="index.html">← Volver a inicio</a>
-  </nav>
 
-  <header class="section-hero" style="background-image:url('img/clima.jpg');">
-    <div class="overlay">
-      <h1>Cambio Climático</h1>
-      <p>El calentamiento global transforma nuestro planeta.</p>
-    </div>
-  </header>
+<nav class="navbar">
+<a href="retos-medioambientales.html">← Volver</a>
+</nav>
 
-  <main class="container">
-    <section class="chart-box">
-      <canvas id="graficoCO2"></canvas>
-    </section>
 
-    <section class="info">
-      <p><strong>Impacto ambiental:</strong> Aumento de temperaturas, incendios, sequías y pérdida de biodiversidad.</p>
-      <p><strong>Impacto humano:</strong> Problemas de salud, pérdidas agrícolas e infraestructuras dañadas.</p>
-      <p><strong>Medidas:</strong> Energías renovables, transporte sostenible y acuerdos internacionales.</p>
-    </section>
+<header class="section-hero" style="background-image:url('img/clima.jpg');">
+<div class="overlay">
+<h1>Cambio Climático</h1>
+<p>El calentamiento global transforma nuestro planeta.</p>
+</div>
+</header>
 
-    <section class="image-gallery">
-      <img src="img/clima1.jpg" alt="Hielo derritiéndose">
-      <img src="img/clima2.jpg" alt="Sequía severa">
-      <img src="img/clima3.jpg" alt="Incendio forestal">
-    </section>
-  </main>
 
-  <footer><p>© 2025 Infoweb</p></footer>
+<main class="container">
+<section class="chart-box">
+<canvas id="graficoCO2"></canvas>
+</section>
 
-  <script>
-    new Chart(document.getElementById('graficoCO2'), {
-      type: 'line',
-      data: {
-        labels: ['2000','2005','2010','2015','2020'],
-        datasets: [{
-          label: 'Emisiones de CO₂ (Gt)',
-          data: [25,28,32,36,40],
-          borderColor: '#1b4332',
-          backgroundColor: '#d8f3dc',
-          fill: true,
-          tension: 0.3
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
-  </script>
+
+<section class="info">
+<p><strong>Impacto ambiental:</strong> Aumento de temperaturas, incendios, sequías y pérdida de biodiversidad.</p>
+<p><strong>Impacto humano:</strong> Problemas de salud, pérdidas agrícolas e infraestructuras dañadas.</p>
+<p><strong>Medidas:</strong> Energías renovables, transporte sostenible y acuerdos internacionales.</p>
+</section>
+
+
+<section class="image-gallery">
+<img src="img/clima1.jpg" alt="Hielo derritiéndose">
+<img src="img/clima2.jpg" alt="Sequía severa">
+<img src="img/clima3.jpg" alt="Incendio forestal">
+</section>
+</main>
+
+
+<footer><p>© 2025 Infoweb</p></footer>
+
+
+<script>
+new Chart(document.getElementById('graficoCO2'), {
+type: 'line',
+data: {
+labels: ['2000','2005','2010','2015','2020'],
+datasets: [{
+label: 'Emisiones de CO₂ (Gt)',
+data: [25,28,32,36,40],
+borderColor: '#1b4332',
+backgroundColor: '#d8f3dc',
+fill: true,
+tension: 0.3
+}]
+},
+options: { responsive: true }
+});
+</script>
+
 
 </body>
 </html>

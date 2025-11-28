@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contaminación del Agua · Infoweb</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contaminación del Agua · Infoweb</title>
+<link rel="stylesheet" href="../styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="index.html">← Volver a inicio</a>
-  </nav>
 
-  <header class="section-hero" style="background-image:url('img/agua.jpg');">
-    <div class="overlay">
-      <h1>Contaminación del Agua</h1>
-      <p>Los plásticos y vertidos amenazan la vida marina.</p>
-    </div>
-  </header>
+<nav class="navbar">
+<a href="retos-medioambientales.html">← Volver</a>
+</nav>
 
-  <main class="container">
-    <section class="chart-box">
-      <canvas id="graficoPlasticos"></canvas>
-    </section>
 
-    <section class="info">
-      <p><strong>Impacto ambiental:</strong> Daño a fauna marina y ecosistemas acuáticos.</p>
-      <p><strong>Impacto humano:</strong> Afecta la pesca, el turismo y la salud.</p>
-      <p><strong>Medidas:</strong> Reducir plásticos de un solo uso, fomentar el reciclaje y limpiezas marinas.</p>
-    </section>
+<header class="section-hero" style="background-image:url('img/agua.jpg');">
+<div class="overlay">
+<h1>Contaminación del Agua</h1>
+<p>Los plásticos y vertidos amenazan la vida marina.</p>
+</div>
+</header>
 
-    <section class="image-gallery">
-      <img src="img/agua1.jpg" alt="Océano limpio">
-      <img src="img/agua2.jpg" alt="Plásticos en el mar">
-      <img src="img/agua3.jpg" alt="Limpieza marina">
-    </section>
-  </main>
 
-  <footer><p>© 2025 Infoweb</p></footer>
+<main class="container">
+<section class="chart-box">
+<canvas id="graficoPlasticos"></canvas>
+</section>
 
-  <script>
-    new Chart(document.getElementById('graficoPlasticos'), {
-      type: 'bar',
-      data: {
-        labels: ['2010','2015','2020','2025'],
-        datasets: [{
-          label: 'Millones de toneladas de plástico',
-          data: [200,250,300,400],
-          backgroundColor: '#74c69d'
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
-  </script>
+
+<section class="info">
+<p><strong>Impacto ambiental:</strong> Daño a fauna marina y ecosistemas acuáticos.</p>
+<p><strong>Impacto humano:</strong> Afecta la pesca, el turismo y la salud.</p>
+<p><strong>Medidas:</strong> Reducir plásticos de un solo uso, fomentar el reciclaje y limpiezas marinas.</p>
+</section>
+
+
+<section class="image-gallery">
+<img src="img/agua1.jpg" alt="Océano limpio">
+<img src="img/agua2.jpg" alt="Plásticos en el mar">
+<img src="img/agua3.jpg" alt="Limpieza marina">
+</section>
+</main>
+
+
+<footer><p>© 2025 Infoweb</p></footer>
+
+
+<script>
+new Chart(document.getElementById('graficoPlasticos'), {
+type: 'bar',
+data: {
+labels: ['2010','2015','2020','2025'],
+datasets: [{
+label: 'Millones de toneladas de plástico',
+data: [200,250,300,400],
+backgroundColor: '#74c69d'
+}]
+},
+options: { responsive: true }
+});
+</script>
+
 
 </body>
 </html>

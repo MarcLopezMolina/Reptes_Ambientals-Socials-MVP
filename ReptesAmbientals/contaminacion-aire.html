@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contaminación del Aire · Infoweb</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contaminación del Aire · Infoweb</title>
+<link rel="stylesheet" href="../styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="index.html">← Volver a inicio</a>
-  </nav>
 
-  <header class="section-hero" style="background-image:url('img/aire.jpg');">
-    <div class="overlay">
-      <h1>Contaminación del Aire</h1>
-      <p>La polución afecta la salud de millones en todo el mundo.</p>
-    </div>
-  </header>
+<nav class="navbar">
+<a href="retos-medioambientales.html">← Volver</a>
+</nav>
 
-  <main class="container">
-    <section class="chart-box">
-      <canvas id="graficoAire"></canvas>
-    </section>
 
-    <section class="info">
-      <p><strong>Impacto ambiental:</strong> Daña ecosistemas y contribuye al cambio climático.</p>
-      <p><strong>Impacto humano:</strong> Provoca enfermedades respiratorias y cardiovasculares.</p>
-      <p><strong>Medidas:</strong> Transporte eléctrico, energías limpias y control industrial.</p>
-    </section>
+<header class="section-hero" style="background-image:url('img/aire.jpg');">
+<div class="overlay">
+<h1>Contaminación del Aire</h1>
+<p>La polución afecta la salud de millones en todo el mundo.</p>
+</div>
+</header>
 
-    <section class="image-gallery">
-      <img src="img/aire1.jpg" alt="Ciudad con smog">
-      <img src="img/aire2.jpg" alt="Fábrica emitiendo humo">
-      <img src="img/aire3.jpg" alt="Transporte urbano eléctrico limpio">
-    </section>
-  </main>
 
-  <footer><p>© 2025 Infoweb</p></footer>
+<main class="container">
+<section class="chart-box">
+<canvas id="graficoAire"></canvas>
+</section>
 
-  <script>
-    new Chart(document.getElementById('graficoAire'), {
-      type: 'pie',
-      data: {
-        labels: ['Industria','Transporte','Hogar','Otros'],
-        datasets: [{
-          data: [40,30,20,10],
-          backgroundColor: ['#95d5b2','#74c69d','#40916c','#1b4332']
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
-  </script>
+
+<section class="info">
+<p><strong>Impacto ambiental:</strong> Daña ecosistemas y contribuye al cambio climático.</p>
+<p><strong>Impacto humano:</strong> Provoca enfermedades respiratorias y cardiovasculares.</p>
+<p><strong>Medidas:</strong> Transporte eléctrico, energías limpias y control industrial.</p>
+</section>
+
+
+<section class="image-gallery">
+<img src="img/aire1.jpg" alt="Ciudad con smog">
+<img src="img/aire2.jpg" alt="Fábrica emitiendo humo">
+<img src="img/aire3.jpg" alt="Transporte urbano eléctrico limpio">
+</section>
+</main>
+
+
+<footer><p>© 2025 Infoweb</p></footer>
+
+
+<script>
+new Chart(document.getElementById('graficoAire'), {
+type: 'pie',
+data: {
+labels: ['Industria','Transporte','Hogar','Otros'],
+datasets: [{
+data: [40,30,20,10],
+backgroundColor: ['#95d5b2','#74c69d','#40916c','#1b4332']
+}]
+},
+options: { responsive: true }
+});
+</script>
+
 
 </body>
 </html>
