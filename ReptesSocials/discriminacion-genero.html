@@ -1,1 +1,130 @@
-<!-- Work in progress... -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discriminación de Género · Infoweb</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.timeline-container {
+  width: 100%; overflow-x: auto; padding: 1rem 0;
+}
+.timeline {
+  display: flex; gap: 3rem; padding: 2rem 1rem;
+  border-top: 4px solid #40916c; margin-top: 2rem;
+}
+.timeline-event {
+  position: relative; min-width: 180px; text-align: center;
+}
+.timeline-event::before {
+  content: ""; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  width: 22px; height: 22px; background: #2d6a4f; border: 3px solid #95d5b2; border-radius: 50%;
+}
+.timeline-event p { text-align: justify; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="retos-sociales.html">← Volver</a>
+</nav>
+
+<header class="section-hero" style="background-image:url('img/genero.jpg');">
+  <div class="overlay">
+    <h1>Discriminación de Género</h1>
+    <p>Un desafío estructural que afecta a millones de mujeres y niñas.</p>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="info">
+  <h2 style="text-align:center;">Caso Real: Brecha de Género en el Empleo en India</h2>
+  <p style="text-align:justify;">
+    En India, la discriminación de género dentro del mercado laboral sigue siendo uno de los mayores obstáculos para el desarrollo social y económico. A pesar de los avances legislativos de las últimas décadas, millones de mujeres continúan enfrentando desigualdad salarial, falta de acceso a puestos de responsabilidad y una marcada presión social que limita su participación en sectores profesionales. Este caso refleja un patrón global, pero con especial intensidad en países donde las estructuras tradicionales aún condicionan las oportunidades disponibles para las mujeres.
+  </p>
+</section>
+
+<!-- LÍNEA DE TIEMPO -->
+<section>
+  <h2 class="center">Línea de Tiempo de la Evolución del Problema</h2>
+  <div class="timeline-container">
+    <div class="timeline">
+
+      <div class="timeline-event">
+        <h4>Años 80</h4>
+        <p>La participación femenina aumenta, pero la sociedad conserva roles rígidos que impiden el acceso equitativo al empleo.</p>
+      </div>
+
+      <div class="timeline-event">
+        <h4>1996</h4>
+        <p>India impulsa leyes contra la discriminación y el acoso laboral, aunque la implementación sigue siendo insuficiente.</p>
+      </div>
+
+      <div class="timeline-event">
+        <h4>2013</h4>
+        <p>El caso «Nirbhaya» provoca reformas y mayor conciencia pública sobre desigualdad y violencia contra las mujeres.</p>
+      </div>
+
+      <div class="timeline-event">
+        <h4>2020</h4>
+        <p>La pandemia golpea con mayor fuerza a las mujeres, aumentando la brecha laboral y salarial.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <h2 style="text-align:center;">Impactos</h2>
+
+  <p><strong>¿Cuál ha sido el impacto sobre las personas?</strong></p>
+  <p style="text-align:justify;">
+    La discriminación de género afecta profundamente la vida de las mujeres, reduciendo su acceso a oportunidades laborales dignas, autonomía económica y empoderamiento social. Este fenómeno impacta su bienestar emocional, limita su capacidad de decisión y perpetúa ciclos de desigualdad que se transmiten entre generaciones.
+  </p>
+
+  <p><strong>¿Cuál ha sido el impacto sobre las empresas?</strong></p>
+  <p style="text-align:justify;">
+    Las empresas pierden talento cualificado al excluir o limitar la participación de mujeres, lo que afecta la innovación, la productividad y la diversidad interna. La falta de mujeres en puestos de liderazgo disminuye la capacidad de las organizaciones para adaptarse a cambios sociales y competir globalmente.
+  </p>
+
+  <p><strong>¿Cuál ha sido el impacto sobre la actividad económica?</strong></p>
+  <p style="text-align:justify;">
+    La discriminación de género reduce la fuerza laboral activa y limita el crecimiento del PIB. Estudios internacionales estiman que economías como la india podrían aumentar significativamente su riqueza si alcanzaran una participación laboral femenina similar a la masculina.
+  </p>
+</section>
+
+<section class="info">
+  <h2 style="text-align:center;">Medidas y Acciones</h2>
+
+  <p><strong>¿Qué medidas y/o acciones se han tomado para minimizar los impactos?</strong></p>
+  <ul>
+    <li>Implementación de leyes contra el acoso y la discriminación en espacios laborales.</li>
+    <li>Programas de capacitación profesional para mujeres jóvenes.</li>
+    <li>Iniciativas gubernamentales para fomentar la igualdad salarial.</li>
+    <li>Campañas educativas para reducir estereotipos de género.</li>
+  </ul>
+
+  <p><strong>¿Qué medidas deberían tomarse?</strong></p>
+  <ul>
+    <li>Mayor fiscalización en empresas con historial de discriminación.</li>
+    <li>Ampliación del acceso a servicios de guardería y apoyo familiar.</li>
+    <li>Programas educativos que integren igualdad desde la infancia.</li>
+    <li>Planes de igualdad obligatorios en empresas medianas y grandes.</li>
+  </ul>
+</section>
+
+<section class="image-gallery">
+  <img src="img/genero1.jpg" alt="Imagen relacionada con el tema">
+  <img src="img/genero3.jpg" alt="Imagen relacionada con el tema">
+  <img src="img/genero2.jpg" alt="Imagen relacionada con el tema">
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 Infoweb</p>
+</footer>
+
+</body>
+</html>

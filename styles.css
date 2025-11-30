@@ -268,6 +268,8 @@ footer {
   justify-content: center;
   flex-wrap: nowrap;
   margin-top: 2rem;
+  flex: 1;
+  height: 200px;
 }
 
 /* que los 3 botones sean responsivos: en pantallas pequeñas pasan a columna */
@@ -302,4 +304,9 @@ footer {
 a:focus {
   outline: 3px solid rgba(66, 153, 225, 0.6);
   outline-offset: 2px;
+}
+
+.card-row .card-btn {
+    flex: 1;
+    height: 200px;
 }

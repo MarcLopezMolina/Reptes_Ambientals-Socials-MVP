@@ -1,1 +1,131 @@
-<!-- Esta web la hace el Patrick. Patrick cuando la hagas borra este comentario plis -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso a la Educación · Infoweb</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <a href="retos-sociales.html">← Volver</a>
+</nav>
+
+<!-- HERO -->
+<header class="section-hero" style="background-image:url('img/educacion1.jpg');">
+  <div class="overlay">
+    <h1>Acceso a la Educación</h1>
+    <p>Un desafío persistente en países con bajos recursos</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Gráfico -->
+  <section class="chart-box">
+    <canvas id="graficoEducacion"></canvas>
+  </section>
+
+  <!-- Texto principal -->
+  <section class="info">
+    <h2>Caso real: Acceso a la educación en Malawi</h2>
+    <p align="justify">
+      Malawi, situado en el sureste de África, es uno de los países con mayores dificultades para garantizar 
+      el acceso universal a la educación. A pesar de que la educación primaria es oficialmente gratuita, 
+      millones de niños continúan enfrentando graves barreras: escuelas saturadas, largas distancias para llegar a clase, 
+      escasez de profesores y materiales, e incluso problemas relacionados con la pobreza extrema y el trabajo infantil.
+    </p>
+
+    <p align="justify">
+      En las zonas rurales, algunos estudiantes caminan más de <b>10 kilómetros diarios</b> para asistir a una escuela que, 
+      en muchos casos, carece de pupitres, libros o instalaciones adecuadas. Además, las niñas se ven 
+      especialmente afectadas por matrimonios tempranos y tareas domésticas que les impiden continuar su educación.
+    </p>
+
+    <hr>
+
+    <h3>Impactos del problema</h3>
+
+    <p><strong>• ¿Cuál ha sido su impacto sobre las personas?</strong><br>
+      • Alta tasa de analfabetismo, especialmente en mujeres.  <br>
+      • Menores oportunidades laborales en la edad adulta.  <br>
+      • Incremento de la desigualdad social y pobreza intergeneracional.  <br>
+      • Riesgo de explotación laboral infantil y matrimonios tempranos.
+    </p>
+
+    <p><strong>• ¿Cuál ha sido su impacto sobre las empresas?</strong><br>
+      • Falta de mano de obra cualificada.  <br>
+      • Dificultad para atraer inversión extranjera.  <br>
+      • Productividad baja debido a la escasa formación técnica y digital.  <br>
+      • Costes adicionales en formación básica para trabajadores.
+    </p>
+
+    <p><strong>• ¿Cuál ha sido su impacto sobre la actividad económica?</strong><br>
+      • Crecimiento económico limitado por baja competitividad.  <br>
+      • Dificultad para diversificar la economía más allá del sector agrícola.  <br>
+      • Menor capacidad de innovación y emprendimiento.  <br>
+      • Incremento de la dependencia de ayuda internacional.
+    </p>
+
+    <h3>Medidas aplicadas en Malawi</h3>
+
+    <p>
+      • Eliminación de tasas escolares en primaria.  <br>
+      • Construcción de nuevas aulas mediante programas internacionales.  <br>
+      • Formación acelerada para nuevos docentes.  <br>
+      • Programas de alimentación escolar para reducir el abandono.  <br>
+      • Campañas para evitar los matrimonios infantiles.
+    </p>
+
+    <h3>Medidas que aún deberían implementarse</h3>
+
+    <p>
+      • Incrementar la inversión en infraestructuras educativas rurales.  <br>
+      • Garantizar transporte escolar en zonas remotas.  <br>
+      • Proveer materiales digitales básicos y formación tecnológica.  <br>
+      • Aumentar salarios docentes para evitar abandono de la profesión.  <br>
+      • Programas de becas para niñas en situación de vulnerabilidad.  <br>
+      • Cooperación internacional estable y de largo plazo.
+    </p>
+  </section>
+
+  <!-- Galería de imágenes -->
+  <section class="image-gallery">
+    <img src="img/educacion1.jpg" alt="Aula en Malawi">
+    <img src="img/educacion2.jpg" alt="Niños caminando hacia la escuela">
+    <img src="img/educacion3.jpg" alt="Estudiantes en clase en zona rural">
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Infoweb</p>
+</footer>
+
+<!-- SCRIPT DEL GRÁFICO -->
+<script>
+new Chart(document.getElementById('graficoEducacion'), {
+  type: 'bar',
+  data: {
+    labels: ['2010', '2015', '2020', '2024'],
+    datasets: [{
+      label: 'Niños sin acceso a educación (millones)',
+      data: [1.5, 1.3, 1.1, 1.0],
+      backgroundColor: '#74c69d'
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: { beginAtZero: true }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
